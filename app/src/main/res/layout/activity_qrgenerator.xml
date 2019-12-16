@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".qrgenerator"
-    android:background="#259B9A">
+    android:background="#7EB2DD">
 
     <TextView
         android:layout_width="match_parent"

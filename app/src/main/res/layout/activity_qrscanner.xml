@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#259B9A">
+    android:background="#7EB2DD">
 
     <TextView
         android:layout_width="match_parent"
@@ -16,7 +16,6 @@
         android:textColor="@color/light"
         android:text="SCANNED CODE LIST"
         android:id="@+id/topbar"/>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
