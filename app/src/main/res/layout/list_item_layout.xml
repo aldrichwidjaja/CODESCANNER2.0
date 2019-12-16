@@ -6,11 +6,12 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="370dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="10dp"
         android:layout_marginTop="30dp"
         android:id="@+id/cardView"
         android:layout_gravity="center"
+        android:ellipsize="end"
        >
 
         <LinearLayout
@@ -37,7 +38,8 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/light"
                 android:text="TYPE"
-                android:id="@+id/textViewType"/>
+                android:id="@+id/textViewType"
+                android:ellipsize="end"/>
 
 
 

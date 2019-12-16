@@ -4,42 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#7EB2DD">
+    android:background="#2A363B">
 
-    <TextView
+    <ImageView
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
         android:textSize="40dp"
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:hint="QR Generator QR Scanner"
+        android:hint="CODE SCANNER"
         android:textColor="@color/dark"
         android:gravity="center"
+        android:src="@drawable/scanning"
         />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="90dp"
         android:textSize="20dp"
         android:text="QR BARCODE GENERATOR"
+        android:background="#E84A5F"
+        android:textColor="@color/light"
         android:onClick="buttonClicked"
         android:id="@+id/button"
         android:layout_below="@+id/editText"
-        android:drawableLeft="@android:drawable/ic_media_play"
+        android:drawableLeft="@drawable/test2"
         android:layout_marginTop="80dp"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="90dp"
+        android:textColor="@color/light"
         android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:background="#E84A5F"
         android:text="QR BARCODE SCANNER"
         android:onClick="buttonClicked"
         android:id="@+id/button2"
         android:layout_below="@id/button"
-        android:drawableLeft="@android:drawable/ic_search_category_default"
+        android:drawableLeft="@drawable/test48"
         android:layout_centerHorizontal="true" />
 
 

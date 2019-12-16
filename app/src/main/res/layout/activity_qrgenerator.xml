@@ -4,22 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".qrgenerator"
-    android:background="#7EB2DD">
+    android:background="#2A363B">
 
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="150dp"
         android:gravity="center"
-        android:background="@color/dark"
+        android:layout_marginTop="50dp"
+        android:tint="@color/light"
         android:textSize="30dp"
         android:textColor="@color/light"
         android:text="QR GENERATOR"
+        android:src="@drawable/qrname"
         android:id="@+id/topbar"/>
 
     <EditText
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="220dp"
+        android:background="#99b898"
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -31,9 +34,19 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Generate QR Code"
+        android:layout_marginTop="15dp"
+        android:background="#E84A5F"
         android:id="@+id/button"
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/dark"
+        android:layout_below="@id/button">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -44,5 +57,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button"
         />
+
+    </LinearLayout>
 
 </RelativeLayout>
