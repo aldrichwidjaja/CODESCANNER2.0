@@ -70,10 +70,24 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyAdapterViewHolde
                 public void onClick(View v) {
                     String type = listItemsArrayList.get(getAdapterPosition()).getType();
 
-                    Intent viewIntent =
-                            new Intent("android.intent.action.VIEW",
-                                    Uri.parse(type));
-                    itemView.getContext().startActivity(viewIntent);
+                    if(type.contains("http://") | type.contains("https://"))
+                    {
+                        Intent viewIntent =
+                                new Intent("android.intent.action.VIEW",
+                                        Uri.parse(type));
+                        itemView.getContext().startActivity(viewIntent);
+                    }
+
+                    else
+                    {
+                        type ="http://www.google.com/#q="+type;
+                        Intent viewIntent =
+                                new Intent("android.intent.action.VIEW",
+                                        Uri.parse(type));
+                        itemView.getContext().startActivity(viewIntent);
+
+                    }
+
 
                 }
             });
