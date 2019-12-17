@@ -1,5 +1,7 @@
 package com.example.testingapp1;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +35,11 @@ public class qrgenerator extends AppCompatActivity {
         imageView = (ImageView)findViewById(R.id.imageView);
         editText = (EditText)findViewById(R.id.editText);
         button = (Button)findViewById(R.id.button);
+
+        SharedPreferences sharedPreftest = getSharedPreferences("bgColorFile", Context.MODE_PRIVATE);
+        int colorValue = sharedPreftest.getInt("color", 0);
+        View test = this.getWindow().getDecorView();
+        test.setBackgroundColor(colorValue);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

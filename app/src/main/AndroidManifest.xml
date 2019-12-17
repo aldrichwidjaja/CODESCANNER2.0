@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.testingapp1">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE:"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE:"></uses-permission>
-
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE:" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE:" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".qrscanner"></activity>
+        <activity android:name=".Model.SettingsActivity"></activity>
+        <activity android:name=".qrscanner" />
         <activity android:name=".qrgenerator" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -25,9 +25,9 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES"
-            android:value="barcode"></meta-data>
-
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
     </application>
 
 </manifest>

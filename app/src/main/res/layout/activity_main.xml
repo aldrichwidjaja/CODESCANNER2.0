@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#2A363B">
+    tools:context=".MainActivity">
 
     <ImageView
         android:layout_width="300dp"
@@ -47,6 +46,33 @@
         android:layout_below="@id/button"
         android:drawableLeft="@drawable/test48"
         android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/button2"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:id="@+id/button3"
+        android:gravity="center"
+        android:text="Dark Theme"
+        android:onClick="buttonClicked"
+        />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:id="@+id/button4"
+            android:gravity="center"
+            android:text="Light Theme"
+            android:onClick="buttonClicked"
+            />
+
+    </LinearLayout>
 
 
 </RelativeLayout>

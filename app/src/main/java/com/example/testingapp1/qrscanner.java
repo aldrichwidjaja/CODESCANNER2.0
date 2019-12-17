@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -37,6 +39,11 @@ public class qrscanner extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         helper = new DBhelper(this);
+
+        SharedPreferences sharedPreftest = getSharedPreferences("bgColorFile", Context.MODE_PRIVATE);
+        int colorValue = sharedPreftest.getInt("color", 0);
+        View test = this.getWindow().getDecorView();
+        test.setBackgroundColor(colorValue);
         // fetch data from database.. if it is avail = show in recyclerview
 
         arrayList = helper.getAllInfo();
