@@ -47,23 +47,8 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(view.getContext(), qrscanner.class);
             startActivity(intent);
         } else if (view.getId() == R.id.button3) {
-            int color2 = Color.parseColor("#FFFFFF");
-            // Save color preference
-            SharedPreferences sharedPref = MainActivity.this.getSharedPreferences("bgColorFile", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putInt("color", color2);
-            editor.apply();
-            View test = this.getWindow().getDecorView();
-            test.setBackgroundColor(color2);
-        } else if (view.getId() == R.id.button4) {
-            int color3 = Color.parseColor("#2A363B");
-            // Save color preference
-            SharedPreferences sharedPref = MainActivity.this.getSharedPreferences("bgColorFile", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putInt("color", color3);
-            editor.apply();
-            View test = this.getWindow().getDecorView();
-            test.setBackgroundColor(color3);
+            Intent intent = new Intent(view.getContext(), SettingsActivity.class);
+            startActivity(intent);
         }
 
     }

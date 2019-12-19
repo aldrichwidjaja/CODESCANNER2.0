@@ -48,6 +48,8 @@ public class SettingsActivity extends Activity implements View.OnClickListener {
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putInt("color", color);
                 editor.apply();
+                View test = this.getWindow().getDecorView();
+                test.setBackgroundColor(color);
                 Intent intent = new Intent(this,MainActivity.class);
                 startActivity(intent);
                 break;
@@ -61,6 +63,8 @@ public class SettingsActivity extends Activity implements View.OnClickListener {
                 SharedPreferences.Editor editor2 = sharedPref2.edit();
                 editor2.putInt("color", color2);
                 editor2.apply();
+                View test2 = this.getWindow().getDecorView();
+                test2.setBackgroundColor(color2);
                 Intent intent2 = new Intent(this, MainActivity.class);
                 startActivity(intent2);
                 break;

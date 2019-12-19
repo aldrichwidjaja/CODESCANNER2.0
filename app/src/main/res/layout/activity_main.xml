@@ -60,17 +60,9 @@
         android:layout_height="80dp"
         android:id="@+id/button3"
         android:gravity="center"
-        android:text="Dark Theme"
+        android:text="Settings"
         android:onClick="buttonClicked"
         />
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="80dp"
-            android:id="@+id/button4"
-            android:gravity="center"
-            android:text="Light Theme"
-            android:onClick="buttonClicked"
-            />
 
     </LinearLayout>
 
