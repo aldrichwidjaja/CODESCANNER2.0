@@ -34,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
 
+        SharedPreferences sharedPreftest2 = getSharedPreferences("button_color", Context.MODE_PRIVATE);
+        int colorValue2 = sharedPreftest2.getInt("color_button", 0);
+
+        button.setBackgroundColor(colorValue2);
+        button2.setBackgroundColor(colorValue2);
+
     }
 
     public void buttonClicked(View view) {
