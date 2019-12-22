@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/whole">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:id="@+id/topbar"
         android:text="QR Generator/Scanner - Aldrich"
+        android:background="@color/red"
         android:gravity="center_vertical"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -23,6 +25,7 @@
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:tint="@color/red"
         android:hint="CODE SCANNER"
         android:textColor="@color/dark"
         android:gravity="center"

@@ -6,4 +6,5 @@
     <color name="dark">#000000</color>
     <color name="light">#FFFFFF</color>
     <color name="red">#E84A5F</color>
+    <color name="defaultcolor">#2A363B</color>
 </resources>

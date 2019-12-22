@@ -33,8 +33,14 @@ public class SettingsActivity extends Activity implements View.OnClickListener {
 
         SharedPreferences sharedPreftest = getSharedPreferences("bgColorFile", Context.MODE_PRIVATE);
         int colorValue = sharedPreftest.getInt("color", 0);
-        View test = this.getWindow().getDecorView();
-        test.setBackgroundColor(colorValue);
+
+        if (colorValue == 0) {
+            View test = this.getWindow().getDecorView();
+            test.setBackgroundColor(getResources().getColor(R.color.defaultcolor));
+        } else {
+            View test = this.getWindow().getDecorView();
+            test.setBackgroundColor(colorValue);
+        }
 
     }
 

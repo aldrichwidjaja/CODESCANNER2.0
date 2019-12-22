@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,19 +37,27 @@ public class qrgenerator extends AppCompatActivity {
         imageView = (ImageView)findViewById(R.id.imageView);
         editText = (EditText)findViewById(R.id.editText);
         button = (Button)findViewById(R.id.button);
+        RelativeLayout whole = (RelativeLayout) findViewById(R.id.whole);
 
         SharedPreferences sharedPreftest = getSharedPreferences("bgColorFile", Context.MODE_PRIVATE);
         int colorValue = sharedPreftest.getInt("color", 0);
-        View test = this.getWindow().getDecorView();
-        test.setBackgroundColor(colorValue);
 
         SharedPreferences sharedPreftest2 = getSharedPreferences("button_color", Context.MODE_PRIVATE);
         int colorValue2 = sharedPreftest2.getInt("color_button", 0);
 
         TextView topbarr = (TextView) findViewById(R.id.topbarr);
-        topbarr.setBackgroundColor(colorValue2);
 
-        button.setBackgroundColor(colorValue2);
+        if (colorValue == 0 | colorValue2 == 0) {
+            topbarr.setBackgroundColor(getResources().getColor(R.color.red));
+            button.setBackgroundColor(getResources().getColor(R.color.red));
+            whole.setBackgroundColor(getResources().getColor(R.color.defaultcolor));
+
+        } else {
+
+            topbarr.setBackgroundColor(colorValue2);
+            button.setBackgroundColor(colorValue2);
+            whole.setBackgroundColor(colorValue);
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
