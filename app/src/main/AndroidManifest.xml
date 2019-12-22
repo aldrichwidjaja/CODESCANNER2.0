@@ -13,7 +13,7 @@
         android:label="QR Scan / Generator - Aldrich"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".Model.SettingsActivity"></activity>
         <activity android:name=".qrscanner" />
         <activity android:name=".qrgenerator" />

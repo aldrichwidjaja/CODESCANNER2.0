@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.testingapp1.Adapters.MyAdapter;
@@ -45,6 +46,12 @@ public class qrscanner extends AppCompatActivity {
         View test = this.getWindow().getDecorView();
         test.setBackgroundColor(colorValue);
         // fetch data from database.. if it is avail = show in recyclerview
+
+        SharedPreferences sharedPreftest2 = getSharedPreferences("button_color", Context.MODE_PRIVATE);
+        int colorValue2 = sharedPreftest2.getInt("color_button", 0);
+
+        TextView topbarr = (TextView) findViewById(R.id.topbarr);
+        topbarr.setBackgroundColor(colorValue2);
 
         arrayList = helper.getAllInfo();
 

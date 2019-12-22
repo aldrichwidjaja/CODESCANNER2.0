@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,6 +41,14 @@ public class qrgenerator extends AppCompatActivity {
         int colorValue = sharedPreftest.getInt("color", 0);
         View test = this.getWindow().getDecorView();
         test.setBackgroundColor(colorValue);
+
+        SharedPreferences sharedPreftest2 = getSharedPreferences("button_color", Context.MODE_PRIVATE);
+        int colorValue2 = sharedPreftest2.getInt("color_button", 0);
+
+        TextView topbarr = (TextView) findViewById(R.id.topbarr);
+        topbarr.setBackgroundColor(colorValue2);
+
+        button.setBackgroundColor(colorValue2);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

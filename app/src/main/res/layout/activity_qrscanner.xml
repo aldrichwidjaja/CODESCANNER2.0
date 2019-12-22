@@ -6,12 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/topbarr"
+        android:text="QR Generator/Scanner - Aldrich"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="80dp"
         android:gravity="center"
-        android:tint="@color/light"
+        android:tint="@color/dark"
         android:textSize="30dp"
         android:textColor="@color/light"
         android:text="QR GENERATOR"

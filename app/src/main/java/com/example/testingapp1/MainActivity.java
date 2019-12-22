@@ -7,9 +7,12 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.testingapp1.Model.SettingsActivity;
 
@@ -33,12 +36,17 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
+        TextView topbar = (TextView) findViewById(R.id.topbar);
+        ImageView logo = (ImageView) findViewById(R.id.editText);
 
         SharedPreferences sharedPreftest2 = getSharedPreferences("button_color", Context.MODE_PRIVATE);
         int colorValue2 = sharedPreftest2.getInt("color_button", 0);
 
         button.setBackgroundColor(colorValue2);
         button2.setBackgroundColor(colorValue2);
+        topbar.setBackgroundColor(colorValue2);
+        System.out.println(colorValue2);
+        logo.setColorFilter(colorValue2);
 
     }
 

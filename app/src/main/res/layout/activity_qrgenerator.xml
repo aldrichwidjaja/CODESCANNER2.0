@@ -5,11 +5,21 @@
     android:layout_height="match_parent"
     tools:context=".qrgenerator">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/topbarr"
+        android:text="QR Generator/Scanner - Aldrich"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="110dp"
         android:tint="@color/dark"
         android:textSize="30dp"
         android:textColor="@color/light"
@@ -20,7 +30,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="280dp"
         android:background="#99b898"
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
@@ -34,7 +44,6 @@
         android:layout_height="wrap_content"
         android:text="Generate QR Code"
         android:layout_marginTop="15dp"
-        android:background="#E84A5F"
         android:id="@+id/button"
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true" />
